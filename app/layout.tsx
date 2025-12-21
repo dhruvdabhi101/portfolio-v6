@@ -28,6 +28,16 @@ export default function RootLayout({
   return (
     <html lang="en" className={jetbrainsMono.variable}>
       <head>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-JC4138XLWE"></Script>
+        <Script id="gtag-script">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-JC4138XLWE');
+          `}
+        </Script>
         <Script id="gtm-script">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
